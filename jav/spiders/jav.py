@@ -10,9 +10,9 @@ class javrun(scrapy.Spider):
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36',
             'Accept': 'text / html, application / xhtml + xml, application / xml;q = 0.9, image / webp, image / apng, * / *;q = 0.8',
         }
-        start_url = 'http://p26y.com/cn/vl_maker.php?&mode=2&m=oq&page=1'
-        for i in range(1, 50):
-            url1 = "http://p26y.com/cn/vl_maker.php?&mode=2&m=oq&page=%s" % i
+        start_url = 'http://p26y.com/cn/vl_searchbyid.php?&keyword=jfb&page=1'
+        for i in range(1, 10):
+            url1 = "http://p26y.com/cn/vl_searchbyid.php?&keyword=jfb&page=" % i
             print(url1)
             yield scrapy.Request(
                 url=url1,
