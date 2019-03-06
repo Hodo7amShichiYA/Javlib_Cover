@@ -43,7 +43,7 @@ class javrun(scrapy.Spider):
     def parse_2(self, response):
         titles = response.xpath('//a[starts-with(@href,"/cn/")]/text()').extract()
         image_urls = response.xpath('//img[@id="video_jacket_img"]/@src').extract()
-        f = open('./img02/' + titles[0] + ".jpg", 'wb')
+        f = open('E:/00 Python/Project/Scrapy Project/img03/' + titles[0] + ".jpg", 'wb')
         f.write((urllib.request.urlopen("http:"+image_urls[0])).read())
         print(titles[0]+"http:"+image_urls[0])
         f.close()
